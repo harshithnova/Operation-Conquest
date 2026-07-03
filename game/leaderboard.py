@@ -1,8 +1,6 @@
-# ==========================================================
+
 # Leaderboard System
 # Handles reading and writing JSON leaderboard
-# ==========================================================
-
 import json
 import os
 from datetime import datetime

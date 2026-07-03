@@ -1,7 +1,6 @@
-# ==========================================================
+
 # Result Screen
 # Displays final score, achievements and statistics
-# ==========================================================
 
 import tkinter as tk
 
@@ -41,18 +40,18 @@ class ResultScreen:
 
         self.build_ui()
 
-    # ==================================================
+
     # Clear Window
-    # ==================================================
+
 
     def clear_window(self):
 
         for widget in self.root.winfo_children():
             widget.destroy()
 
-    # ==================================================
+
     # Build UI
-    # ==================================================
+
 
     def build_ui(self):
 
@@ -76,9 +75,9 @@ class ResultScreen:
             total_questions=self.total_questions
         )
 
-        # ----------------------------------------------
+
         # Save Score To Leaderboard
-        # ----------------------------------------------
+
 
         self.leaderboard.save_score(
             player_name=self.player_name,
@@ -87,9 +86,9 @@ class ResultScreen:
             difficulty=self.difficulty
         )
 
-        # ----------------------------------------------
+
         # Main Window
-        # ----------------------------------------------
+
 
         self.root.configure(
             bg=COLORS["background"]
@@ -107,9 +106,9 @@ class ResultScreen:
             pady=20
         )
 
-        # ----------------------------------------------
+
         # Title
-        # ----------------------------------------------
+
 
         title = tk.Label(
             main_frame,
@@ -123,9 +122,9 @@ class ResultScreen:
             pady=20
         )
 
-        # ----------------------------------------------
+
         # Results Card
-        # ----------------------------------------------
+
 
         result_card = tk.Frame(
             main_frame,
@@ -138,9 +137,9 @@ class ResultScreen:
             pady=10
         )
 
-        # ----------------------------------------------
+
         # Statistics
-        # ----------------------------------------------
+
 
         stats = [
 
@@ -177,9 +176,9 @@ class ResultScreen:
                 anchor="w",
                 pady=2
             )
-        # ----------------------------------------------
+
         # Achievements Section
-        # ----------------------------------------------
+
 
         tk.Label(
             result_card,
@@ -218,9 +217,9 @@ class ResultScreen:
 
 
 
-        # ----------------------------------------------
+
         # Buttons
-        # ----------------------------------------------
+
 
         button_frame = tk.Frame(
             main_frame,
@@ -285,9 +284,9 @@ class ResultScreen:
             padx=10
         )
 
-    # ==================================================
+
     # Open Leaderboard
-    # ==================================================
+
 
     def open_leaderboard(self):
 

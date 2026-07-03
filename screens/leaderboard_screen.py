@@ -1,7 +1,5 @@
-# ==========================================================
 # Leaderboard Screen
 # Displays Top 10 Players
-# ==========================================================
 
 import tkinter as tk
 
@@ -21,18 +19,14 @@ class LeaderboardScreen:
 
         self.build_ui()
 
-    # ==================================================
     # Clear Window
-    # ==================================================
 
     def clear_window(self):
 
         for widget in self.root.winfo_children():
             widget.destroy()
 
-    # ==================================================
     # Build UI
-    # ==================================================
 
     def build_ui(self):
 
@@ -54,9 +48,7 @@ class LeaderboardScreen:
             pady=20
         )
 
-        # ----------------------------------------------
         # Title
-        # ----------------------------------------------
 
         title = tk.Label(
             main_frame,
@@ -82,9 +74,7 @@ class LeaderboardScreen:
             pady=(0, 20)
         )
 
-        # ----------------------------------------------
         # Table Card
-        # ----------------------------------------------
 
         table_card = tk.Frame(
             main_frame,
@@ -99,9 +89,7 @@ class LeaderboardScreen:
             pady=10
         )
 
-        # ----------------------------------------------
         # Table Headers
-        # ----------------------------------------------
 
         headers = [
             "Rank",
@@ -130,9 +118,7 @@ class LeaderboardScreen:
                 pady=10
             )
 
-        # ----------------------------------------------
         # Load Scores
-        # ----------------------------------------------
 
         scores = self.leaderboard.get_top_scores()
 
@@ -190,9 +176,7 @@ class LeaderboardScreen:
                         pady=5
                     )
 
-        # ----------------------------------------------
         # Buttons
-        # ----------------------------------------------
 
         button_frame = tk.Frame(
             main_frame,

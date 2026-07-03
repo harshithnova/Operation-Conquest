@@ -1,7 +1,6 @@
-# ==========================================================
 # Quiz Screen
 # Main gameplay screen
-# ==========================================================
+# 
 
 import tkinter as tk
 from tkinter import ttk
@@ -28,17 +27,13 @@ class QuizScreen:
         self.difficulty = difficulty
         self.total_questions = total_questions
 
-        # ----------------------------------------------
         # Quiz Engine
-        # ----------------------------------------------
 
         self.engine = QuizEngine(difficulty)
 
         self.stats = Statistics()
 
-        # ----------------------------------------------
         # Game Variables
-        # ----------------------------------------------
 
         self.current_question_number = 0
 
@@ -58,26 +53,20 @@ class QuizScreen:
 
         self.timer_job = None
 
-        # ----------------------------------------------
         # UI
-        # ----------------------------------------------
 
         self.build_ui()
 
         self.load_question()
 
-    # ==================================================
     # Clear Window
-    # ==================================================
 
     def clear_window(self):
 
         for widget in self.root.winfo_children():
             widget.destroy()
 
-    # ==================================================
     # Build UI
-    # ==================================================
 
     def build_ui(self):
 
@@ -87,9 +76,7 @@ class QuizScreen:
             bg=COLORS["background"]
         )
 
-        # ----------------------------------------------
         # Main Container
-        # ----------------------------------------------
 
         self.main_frame = tk.Frame(
             self.root,
@@ -103,33 +90,23 @@ class QuizScreen:
             pady=20
         )
 
-        # ----------------------------------------------
         # Header
-        # ----------------------------------------------
 
         self.create_header()
 
-        # ----------------------------------------------
         # Progress Bar
-        # ----------------------------------------------
 
         self.create_progress_bar()
 
-        # ----------------------------------------------
         # Question Card
-        # ----------------------------------------------
 
         self.create_question_card()
 
-        # ----------------------------------------------
         # Stats Section
-        # ----------------------------------------------
 
         self.create_stats_section()
 
-        # ----------------------------------------------
         # Feedback Label
-        # ----------------------------------------------
 
         self.feedback_label = tk.Label(
             self.main_frame,
@@ -143,9 +120,7 @@ class QuizScreen:
             pady=10
         )
 
-    # ==================================================
     # Header
-    # ==================================================
 
     def create_header(self):
 
@@ -183,9 +158,7 @@ class QuizScreen:
             side="right"
         )
 
-    # ==================================================
     # Progress Bar
-    # ==================================================
 
     def create_progress_bar(self):
 
@@ -219,9 +192,7 @@ class QuizScreen:
             pady=5
         )
 
-    # ==================================================
     # Question Card
-    # ==================================================
 
     def create_question_card(self):
 
@@ -327,9 +298,8 @@ class QuizScreen:
             pady=5
         )
 
-    # ==================================================
     # Stats Section
-    # ==================================================
+
 
     def create_stats_section(self):
 
@@ -398,9 +368,9 @@ class QuizScreen:
             padx=20
         )
 
-    # ==================================================
+
     # Load New Question
-    # ==================================================
+
 
     def load_question(self):
 
@@ -434,9 +404,9 @@ class QuizScreen:
         self.start_timer()
 
            
-    # ==================================================
+
     # Start Timer
-    # ==================================================
+
 
     def start_timer(self):
 
@@ -452,9 +422,8 @@ class QuizScreen:
 
         self.update_timer()
 
-    # ==================================================
     # Update Timer
-    # ==================================================
+
 
     def update_timer(self):
 
@@ -482,9 +451,9 @@ class QuizScreen:
             self.update_timer
         )
 
-    # ==================================================
+
     # Auto Submit
-    # ==================================================
+
 
     def auto_submit(self):
 
@@ -509,9 +478,9 @@ class QuizScreen:
             self.next_question
         )
 
-    # ==================================================
+
     # Submit Answer
-    # ==================================================
+
 
     def submit_answer(self, event=None):
 
@@ -573,9 +542,9 @@ class QuizScreen:
             self.next_question
         )
 
-    # ==================================================
+
     # Correct Answer
-    # ==================================================
+  
 
     def handle_correct(self, response_time):
 
@@ -598,9 +567,9 @@ class QuizScreen:
             text=f"Score: {self.score}"
         )
 
-    # ==================================================
+
     # Wrong Answer
-    # ==================================================
+
 
     def handle_wrong(self, response_time):
 
@@ -617,9 +586,9 @@ class QuizScreen:
             fg=COLORS["danger"]
         )
 
-    # ==================================================
+
     # Update Stats Display
-    # ==================================================
+
 
     def update_stats_display(self):
 
@@ -641,9 +610,9 @@ class QuizScreen:
             text=f"Accuracy: {accuracy}%"
         )
 
-    # ==================================================
+
     # Next Question
-    # ==================================================
+
 
     def next_question(self):
 
@@ -655,9 +624,9 @@ class QuizScreen:
 
         self.load_question()
 
-    # ==================================================
+
     # Finish Quiz
-    # ==================================================
+
 
     def finish_quiz(self):
         self.submit_button.config(

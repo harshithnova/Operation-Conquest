@@ -1,39 +1,7 @@
-# ==========================================================
-# Operation Conquest
-# Global Settings File
-# ==========================================================
-#
-# This file stores:
-# - Colors
-# - Fonts
-# - Difficulty Settings
-# - Achievement Thresholds
-# - Game Constants
-#
-# Any file can import these settings.
-#
-# Example:
-# from config.settings import COLORS
-#
-# ==========================================================
-
-
-# ==========================================================
-# APPLICATION INFO
-# ==========================================================
-
 APP_NAME = "Operation Conquest"
-
 WINDOW_WIDTH = 1200
 WINDOW_HEIGHT = 800
-
 MAX_LEADERBOARD_ENTRIES = 10
-
-
-# ==========================================================
-# COLOR THEME
-# ==========================================================
-
 COLORS = {
     "background": "#0B0F19",
     "card": "#161B22",
@@ -51,9 +19,7 @@ COLORS = {
 }
 
 
-# ==========================================================
-# FONTS
-# ==========================================================
+
 
 FONTS = {
 
@@ -73,11 +39,6 @@ FONTS = {
 
     "score": ("Montserrat", 16, "bold")
 }
-
-
-# ==========================================================
-# DIFFICULTY SETTINGS
-# ==========================================================
 
 DIFFICULTY_SETTINGS = {
 
@@ -104,9 +65,6 @@ DIFFICULTY_SETTINGS = {
 }
 
 
-# ==========================================================
-# PERFORMANCE RATINGS
-# ==========================================================
 
 RATINGS = {
 
@@ -121,10 +79,6 @@ RATINGS = {
     0: "Beginner"
 }
 
-
-# ==========================================================
-# ACHIEVEMENTS
-# ==========================================================
 
 ACHIEVEMENTS = {
 
@@ -144,10 +98,6 @@ ACHIEVEMENTS = {
         "Finish Hard difficulty with at least 80% accuracy."
 }
 
-
-# ==========================================================
-# FEEDBACK MESSAGES
-# ==========================================================
 
 CORRECT_MESSAGES = [
 
@@ -175,10 +125,6 @@ WRONG_MESSAGES = [
 ]
 
 
-# ==========================================================
-# MOTIVATIONAL QUOTES
-# ==========================================================
-
 MOTIVATIONAL_QUOTES = [
 
     "Success is the sum of small efforts repeated daily.",
@@ -197,10 +143,5 @@ MOTIVATIONAL_QUOTES = [
 
     "Conquer today's challenge."
 ]
-
-
-# ==========================================================
-# DATA FILES
-# ==========================================================
 
 LEADERBOARD_FILE = "data/leaderboard.json"

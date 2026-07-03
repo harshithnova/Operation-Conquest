@@ -1,7 +1,6 @@
-# ==========================================================
 # Welcome Screen
 # First screen shown when the application starts
-# ==========================================================
+
 
 import tkinter as tk
 from tkinter import ttk
@@ -25,18 +24,18 @@ class WelcomeScreen:
 
         self.build_ui()
 
-    # ======================================================
+    
     # Clear Window
-    # ======================================================
+  
 
     def clear_window(self):
 
         for widget in self.root.winfo_children():
             widget.destroy()
 
-    # ======================================================
+  
     # Start Game
-    # ======================================================
+    
 
     def start_game(self):
 
@@ -52,9 +51,9 @@ class WelcomeScreen:
             total_questions=self.question_count.get()
         )
 
-    # ======================================================
+
     # Create UI
-    # ======================================================
+
 
     def build_ui(self):
 
@@ -74,9 +73,9 @@ class WelcomeScreen:
             expand=True
         )
 
-        # --------------------------------------------------
+
         # Title
-        # --------------------------------------------------
+
 
         title = tk.Label(
             main_frame,
@@ -98,9 +97,9 @@ class WelcomeScreen:
 
         subtitle.pack(pady=(0, 30))
 
-        # --------------------------------------------------
+
         # Main Card
-        # --------------------------------------------------
+
 
         card = tk.Frame(
             main_frame,
@@ -111,9 +110,8 @@ class WelcomeScreen:
 
         card.pack()
 
-        # --------------------------------------------------
         # Name
-        # --------------------------------------------------
+
 
         tk.Label(
             card,
@@ -133,9 +131,9 @@ class WelcomeScreen:
 
         name_entry.pack(pady=10)
 
-        # --------------------------------------------------
+
         # Difficulty
-        # --------------------------------------------------
+
 
         tk.Label(
             card,
@@ -168,9 +166,8 @@ class WelcomeScreen:
                 padx=10
             )
 
-        # --------------------------------------------------
         # Question Count
-        # --------------------------------------------------
+
 
         tk.Label(
             card,
@@ -188,9 +185,9 @@ class WelcomeScreen:
             width=10
         ).pack()
 
-        # --------------------------------------------------
+
         # Start Button
-        # --------------------------------------------------
+
 
         start_button = tk.Button(
             card,
